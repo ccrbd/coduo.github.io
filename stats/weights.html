@@ -1,0 +1,149 @@
+<title>Bangladeshi Server : Call of Duty United Offensive Statistics</title><style>
+a:hover{COLOR:red}
+TD.column1 {font-family:Arial;font-size: 10px;COLOR: #000000;BACKGROUND-COLOR: #525762;FONT-WEIGHT = bold}
+TD.other {font-family:Arial;font-size: 10px;COLOR: #E0E0E0;BACKGROUND-COLOR: #5c616c}
+H1 {font-family:Arial;font-size: 16px;COLOR: #FFFFFF;FONT-WEIGHT = bold;text-decoration: underline}
+H2 {font-family:Arial;font-size: 10px;COLOR: #FF7B05;FONT-WEIGHT = bold}
+H3 {font-family:Arial;font-size: 9px;COLOR: #FF7B05}
+TH {font-family:arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951;text-decoration: underline}
+A{font-family:Arial;font-size: 10px;text-decoration: none;COLOR: #FFFFFF}
+a.head{font-family:Arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951}
+BODY {SCROLLBAR-TRACK-COLOR: #31343d; SCROLLBAR-BASE-COLOR: #3a3e41}
+</style> <body bgcolor=#525762 background='Images/Other/Back.gif'>
+<table width=100%><tr><th width=20% align=center class=other><a class='head'  href=server.html>server statistics</a></th><th width=20% align=center class=other ><a  class='head' href=stat_score.html>kill statistics</a></th><th width=20% align=center class=head ><a  class='head' href=obj_bel_alive_tick.html>objectives statistics</a></th><th width=20% align=center  class=other><a class='head'  href=award.html>award</a></th><th width=20% align=center class=other><a class='head'  href=weights.html>skill modifiers</a></th></tr></table><script><!--
+var TRIED_EVERYTHING = 998;
+var IMBROKEN = 999;
+var ImageNotFound;
+function ErrorImg(obj, folder, image, ext)
+{
+  switch(obj.NextTry)
+  {
+    case IMBROKEN:
+      break;
+    case TRIED_EVERYTHING:
+      obj.NextTry = IMBROKEN;
+      obj.src = folder + 'image_not_found.' + ext;
+      break;
+    default:
+      if (image.substr(image.length - 3,3) == '_sm')
+      {
+        obj.NextTry = IMBROKEN;
+        obj.src = folder + 'image_not_found.' + ext;
+      }
+      else
+      {
+        obj.NextTry = TRIED_EVERYTHING;
+        obj.src = folder + image + '_sm.' + ext;
+      }
+      break;
+  }
+  return(0);
+}
+// -->
+</script>
+
+<h1>skill modifiers</h1>
+<br><table width=40%><tr><th width=50% align=center class=head ><b>Item</th><th width=25% align=center class=head><b>Kill Bias</th><TH width=25% align=center><a class=head <b>Death Bias</a></th>
+<tr><td width=50% align=center class=other><b>kar98k</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>mosin nagant</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>enfield</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>m1carbine</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>m1garand</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>gewehr43</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>svt40</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>g43</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>dp28</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>mg42 bipod stand</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mg42 bipod duck</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mg42 bipod prone</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mg34</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>mg sg43 stand</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>m1919a6klart</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>mg50cal tripod stand</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>30cal stand</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mp44</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>bren</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>bar</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mp44 semi</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>bar slow</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>ppsh</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>thompson</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>greasegun</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>mp40</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>sten</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>pps42</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>ppsh semi</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>thompson semi</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>frag grenade american</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>frag grenade german</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>frag grenade british</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>frag grenade russian</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>fraggrenade</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>mk1britishfrag</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>rgd-33russianfrag</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>stielhandgranate</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>satchelcharge</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>bazooka</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>panzerfaust</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>panzerschreck</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>kar98k sniper</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mosin nagant sniper</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>springfield</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>enfield scope</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>luger</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>colt</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>webley</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>tt30</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>tt33</td><td width=25% align=center class=other> +4</td><td width=25% align=center class=other>-4</td></tr>
+<tr><td width=50% align=center class=other><b>shotgun</td><td width=25% align=center class=other> +0.1</td><td width=25% align=center class=other>-0.1</td></tr>
+<tr><td width=50% align=center class=other><b>flamethrower</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>binoculars</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>flashgrenade</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>smokegrenade</td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>-5</td></tr>
+<tr><td width=50% align=center class=other><b>binoculars artillery</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>ptrs41 antitank rifle</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>fg42</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>fg42 semi</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mg30cal</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>sten silenced</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mg34 tank</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>30cal tank</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>50cal tank</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mg42 tank</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>sg43 tank</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>sg43 turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>sherman turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>su152 turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>elefant turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>flak88 turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>panzeriv turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>mg42 turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>t34 turret</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>torso upper</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>head</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>torso lower</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>leg upper</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>arm lower</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>arm upper</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>all over</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>leg lower</td><td width=25% align=center class=other> +2</td><td width=25% align=center class=other>-2</td></tr>
+<tr><td width=50% align=center class=other><b>foot</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>hand</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>helmet</td><td width=25% align=center class=other> +1</td><td width=25% align=center class=other>-1</td></tr>
+<tr><td width=50% align=center class=other><b>neck</td><td width=25% align=center class=other> +3</td><td width=25% align=center class=other>-3</td></tr>
+<tr><td width=50% align=center class=other><b>longest multiplied by </td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>suicides multiplied by </td><td width=25% align=center class=other> -5</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>teamkills multiplied by </td><td width=25% align=center class=other> -10</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>fivecombo multiplied by </td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>sacrifice multiplied by </td><td width=25% align=center class=other> +10</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>Kill : club multiplied by </td><td width=25% align=center class=other> +5</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>Death : club multiplied by </td><td width=25% align=center class=other> -5</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>Kill : handbagged multiplied by </td><td width=25% align=center class=other> +12</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>Death : handbagged multiplied by </td><td width=25% align=center class=other> -5</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>Kill : clubbinoculars multiplied by </td><td width=25% align=center class=other> +12</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>Death : clubbinoculars multiplied by </td><td width=25% align=center class=other> -5</td><td width=25% align=center class=other>N/A</td></tr>
+<tr><td width=50% align=center class=other><b>bel alive tick multiplied by </td><td width=25% align=center class=other> +1.5</td><td width=25% align=center class=other>N/A</td></tr>
+
+
+</table><h3><br>Stat generated by <b><i><a href="http://www.Stativore.co.uk" target="_blank">Stativore  V1.0 Build 273  Profile: ccr.ini</a> -  07/10/2021, 14:41:21<b/><i/><h3/>
+<h3><br>Version supported by Delerium, Lesbian King and Hebbian <b><i><a href="http://www.longdongs.co.uk" target=_blank>- Visit website here</a><i/><b/><h3/></body>

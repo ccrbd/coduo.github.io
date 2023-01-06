@@ -1,0 +1,105 @@
+<title>Bangladeshi Server : Call of Duty United Offensive Statistics</title><style>
+a:hover{COLOR:red}
+TD.column1 {font-family:Arial;font-size: 10px;COLOR: #000000;BACKGROUND-COLOR: #525762;FONT-WEIGHT = bold}
+TD.other {font-family:Arial;font-size: 10px;COLOR: #E0E0E0;BACKGROUND-COLOR: #5c616c}
+H1 {font-family:Arial;font-size: 16px;COLOR: #FFFFFF;FONT-WEIGHT = bold;text-decoration: underline}
+H2 {font-family:Arial;font-size: 10px;COLOR: #FF7B05;FONT-WEIGHT = bold}
+H3 {font-family:Arial;font-size: 9px;COLOR: #FF7B05}
+TH {font-family:arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951;text-decoration: underline}
+A{font-family:Arial;font-size: 10px;text-decoration: none;COLOR: #FFFFFF}
+a.head{font-family:Arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951}
+BODY {SCROLLBAR-TRACK-COLOR: #31343d; SCROLLBAR-BASE-COLOR: #3a3e41}
+</style> <body bgcolor=#525762 background='Images/Other/Back.gif'>
+<table width=100%><tr><th width=20% align=center class=other><a class='head'  href=server.html>server statistics</a></th><th width=20% align=center class=other ><a  class='head' href=stat_score.html>kill statistics</a></th><th width=20% align=center class=head ><a  class='head' href=obj_bel_alive_tick.html>objectives statistics</a></th><th width=20% align=center  class=other><a class='head'  href=award.html>award</a></th><th width=20% align=center class=other><a class='head'  href=weights.html>skill modifiers</a></th></tr></table>
+<script><!--
+var TRIED_EVERYTHING = 998;
+var IMBROKEN = 999;
+var ImageNotFound;
+function ErrorImg(obj, folder, image, ext)
+{
+  switch(obj.NextTry)
+  {
+    case IMBROKEN:
+      break;
+    case TRIED_EVERYTHING:
+      obj.NextTry = IMBROKEN;
+      obj.src = folder + 'image_not_found.' + ext;
+      break;
+    default:
+      if (image.substr(image.length - 3,3) == '_sm')
+      {
+        obj.NextTry = IMBROKEN;
+        obj.src = folder + 'image_not_found.' + ext;
+      }
+      else
+      {
+        obj.NextTry = TRIED_EVERYTHING;
+        obj.src = folder + image + '_sm.' + ext;
+      }
+      break;
+  }
+  return(0);
+}
+// -->
+</script>
+
+<h1>player statistics by ratio</h1>
+<br><table><tr><TH width=75 align=center class=column1><b>rank</TH><TH width=250 align=center class=column1><b>player</TH><TH width=100 align=center><b><a class=head href='stat_kill.html'>kill</a></TH><TH width=100 align=center class=other><b><a class=head href='stat_death.html'>death</a></TH><TH width=100 align=center><b><a class=head href='stat_ratio.html'>ratio</a></TH><TH width=100 align=center><b><a class=head href='stat_score.html'>score</a></TH><TH width=150 align=center><b><a class=head href='stat_5xstreak.html'>5 kill streak</a></TH><TH width=150 align=center><b><a class=head href='stat_longest.html'>longest streak</a></TH><TH width=150 align=center><a class=head href='stat_round.html'>rounds</a></th><TH width=150 align=center><a class=head href='stat_skill.html'>skill</a></th><TH width=150 align=center><a class=head href='stat_date.html'>last update</a></th></tr>
+<tr><TD width=75 align=center class=other><b>1</TD><TD width=250 align=center  class=column1><a class=other href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=150 align=center class=other>6624</TD><TD width=150 align=center class=other>5868</TD><TD width=150 align=center class=other>1.12</TD><TD width=150 align=center class=other>756</TD><TD width=150 align=center class=other>245</TD><TD width=150 align=center class=other>11</TD><TD width=150 align=center class=other>249</TD>
+<TD width=150 align=center class=other>-5272.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>2</TD><TD width=250 align=center  class=column1><a class=other href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=150 align=center class=other>12634</TD><TD width=150 align=center class=other>11456</TD><TD width=150 align=center class=other>1.10</TD><TD width=150 align=center class=other>1178</TD><TD width=150 align=center class=other>469</TD><TD width=150 align=center class=other>14</TD><TD width=150 align=center class=other>473</TD>
+<TD width=150 align=center class=other>-5725.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>3</TD><TD width=250 align=center  class=column1><a class=other href='player_megamind.html'>Megamind</a></TD><TD width=150 align=center class=other>41282</TD><TD width=150 align=center class=other>38029</TD><TD width=150 align=center class=other>1.08</TD><TD width=150 align=center class=other>3253</TD><TD width=150 align=center class=other>1395</TD><TD width=150 align=center class=other>16</TD><TD width=150 align=center class=other>1507</TD>
+<TD width=150 align=center class=other>-26177.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>4</TD><TD width=250 align=center  class=column1><a class=other href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=150 align=center class=other>153</TD><TD width=150 align=center class=other>141</TD><TD width=150 align=center class=other>1.08</TD><TD width=150 align=center class=other>12</TD><TD width=150 align=center class=other>6</TD><TD width=150 align=center class=other>9</TD><TD width=150 align=center class=other>8</TD>
+<TD width=150 align=center class=other>34.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>5</TD><TD width=250 align=center  class=column1><a class=other href='player_medhabi.html'>Medhabi</a></TD><TD width=150 align=center class=other>24868</TD><TD width=150 align=center class=other>23324</TD><TD width=150 align=center class=other>1.06</TD><TD width=150 align=center class=other>1544</TD><TD width=150 align=center class=other>841</TD><TD width=150 align=center class=other>15</TD><TD width=150 align=center class=other>973</TD>
+<TD width=150 align=center class=other>-15536.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>6</TD><TD width=250 align=center  class=column1><a class=other href='player_achilis_armor.html'></font><FONT color=#00FF00>ACHILIS_</font><FONT color=blue>ARMOR</a></TD><TD width=150 align=center class=other>402</TD><TD width=150 align=center class=other>401</TD><TD width=150 align=center class=other>1.00</TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>18</TD><TD width=150 align=center class=other>10</TD><TD width=150 align=center class=other>12</TD>
+<TD width=150 align=center class=other>-293.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>7</TD><TD width=250 align=center  class=column1><a class=other href='player_gaddafi.html'>Gaddafi</a></TD><TD width=150 align=center class=other>14952</TD><TD width=150 align=center class=other>15217</TD><TD width=150 align=center class=other>0.98</TD><TD width=150 align=center class=other>-265</TD><TD width=150 align=center class=other>415</TD><TD width=150 align=center class=other>12</TD><TD width=150 align=center class=other>673</TD>
+<TD width=150 align=center class=other>-15201.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>8</TD><TD width=250 align=center  class=column1><a class=other href='player_joker.html'>Joker</a></TD><TD width=150 align=center class=other>20814</TD><TD width=150 align=center class=other>21533</TD><TD width=150 align=center class=other>0.96</TD><TD width=150 align=center class=other>-719</TD><TD width=150 align=center class=other>754</TD><TD width=150 align=center class=other>17</TD><TD width=150 align=center class=other>896</TD>
+<TD width=150 align=center class=other>-47210.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>9</TD><TD width=250 align=center  class=column1><a class=other href='player_salahdin.html'>SALAHDIN</a></TD><TD width=150 align=center class=other>875</TD><TD width=150 align=center class=other>927</TD><TD width=150 align=center class=other>0.94</TD><TD width=150 align=center class=other>-52</TD><TD width=150 align=center class=other>22</TD><TD width=150 align=center class=other>10</TD><TD width=150 align=center class=other>36</TD>
+<TD width=150 align=center class=other>-1296.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>10</TD><TD width=250 align=center  class=column1><a class=other href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=150 align=center class=other>18561</TD><TD width=150 align=center class=other>20256</TD><TD width=150 align=center class=other>0.91</TD><TD width=150 align=center class=other>-1695</TD><TD width=150 align=center class=other>490</TD><TD width=150 align=center class=other>13</TD><TD width=150 align=center class=other>867</TD>
+<TD width=150 align=center class=other>-30884.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>11</TD><TD width=250 align=center  class=column1><a class=other href='player_homelander.html'></font><FONT color=red>HOMELANDER</a></TD><TD width=150 align=center class=other>5616</TD><TD width=150 align=center class=other>6281</TD><TD width=150 align=center class=other>0.89</TD><TD width=150 align=center class=other>-665</TD><TD width=150 align=center class=other>126</TD><TD width=150 align=center class=other>10</TD><TD width=150 align=center class=other>235</TD>
+<TD width=150 align=center class=other>-8012.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>12</TD><TD width=250 align=center  class=column1><a class=other href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=150 align=center class=other>17015</TD><TD width=150 align=center class=other>19299</TD><TD width=150 align=center class=other>0.88</TD><TD width=150 align=center class=other>-2284</TD><TD width=150 align=center class=other>391</TD><TD width=150 align=center class=other>17</TD><TD width=150 align=center class=other>806</TD>
+<TD width=150 align=center class=other>-31252.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>13</TD><TD width=250 align=center  class=column1><a class=other href='player_general+20gandu.html'>GENERAL&#32;GANDU</a></TD><TD width=150 align=center class=other>219</TD><TD width=150 align=center class=other>260</TD><TD width=150 align=center class=other>0.84</TD><TD width=150 align=center class=other>-41</TD><TD width=150 align=center class=other>3</TD><TD width=150 align=center class=other>7</TD><TD width=150 align=center class=other>12</TD>
+<TD width=150 align=center class=other>-422.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>14</TD><TD width=250 align=center  class=column1><a class=other href='player_maximus.html'>MAXIMUS</a></TD><TD width=150 align=center class=other>22982</TD><TD width=150 align=center class=other>28469</TD><TD width=150 align=center class=other>0.80</TD><TD width=150 align=center class=other>-5487</TD><TD width=150 align=center class=other>477</TD><TD width=150 align=center class=other>14</TD><TD width=150 align=center class=other>1116</TD>
+<TD width=150 align=center class=other>-42966.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>15</TD><TD width=250 align=center  class=column1><a class=other href='player_zero.html'>Zero</a></TD><TD width=150 align=center class=other>191</TD><TD width=150 align=center class=other>241</TD><TD width=150 align=center class=other>0.79</TD><TD width=150 align=center class=other>-50</TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>7</TD><TD width=150 align=center class=other>9</TD>
+<TD width=150 align=center class=other>-389.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>16</TD><TD width=250 align=center  class=column1><a class=other href='player_mad_dog_mirpur.html'>MAD_DOG_MIRPUR</a></TD><TD width=150 align=center class=other>183</TD><TD width=150 align=center class=other>233</TD><TD width=150 align=center class=other>0.78</TD><TD width=150 align=center class=other>-50</TD><TD width=150 align=center class=other>2</TD><TD width=150 align=center class=other>6</TD><TD width=150 align=center class=other>8</TD>
+<TD width=150 align=center class=other>-170.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>17</TD><TD width=250 align=center  class=column1><a class=other href='player_kutus.html'>kutus</a></TD><TD width=150 align=center class=other>417</TD><TD width=150 align=center class=other>581</TD><TD width=150 align=center class=other>0.71</TD><TD width=150 align=center class=other>-164</TD><TD width=150 align=center class=other>4</TD><TD width=150 align=center class=other>7</TD><TD width=150 align=center class=other>18</TD>
+<TD width=150 align=center class=other>-953.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>18</TD><TD width=250 align=center  class=column1><a class=other href='player_mogambo.html'>MoGamBo</a></TD><TD width=150 align=center class=other>17292</TD><TD width=150 align=center class=other>24707</TD><TD width=150 align=center class=other>0.69</TD><TD width=150 align=center class=other>-7415</TD><TD width=150 align=center class=other>280</TD><TD width=150 align=center class=other>12</TD><TD width=150 align=center class=other>930</TD>
+<TD width=150 align=center class=other>-55817.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>19</TD><TD width=250 align=center  class=column1><a class=other href='player_darklord.html'></font><FONT color=red>DarkLord</a></TD><TD width=150 align=center class=other>362</TD><TD width=150 align=center class=other>542</TD><TD width=150 align=center class=other>0.66</TD><TD width=150 align=center class=other>-180</TD><TD width=150 align=center class=other>7</TD><TD width=150 align=center class=other>6</TD><TD width=150 align=center class=other>22</TD>
+<TD width=150 align=center class=other>-1091.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>20</TD><TD width=250 align=center  class=column1><a class=other href='player_raptor.html'>Raptor</a></TD><TD width=150 align=center class=other>856</TD><TD width=150 align=center class=other>1306</TD><TD width=150 align=center class=other>0.65</TD><TD width=150 align=center class=other>-450</TD><TD width=150 align=center class=other>15</TD><TD width=150 align=center class=other>6</TD><TD width=150 align=center class=other>41</TD>
+<TD width=150 align=center class=other>-2363.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>21</TD><TD width=250 align=center  class=column1><a class=other href='player_x_b.html'>X_B</a></TD><TD width=150 align=center class=other>461</TD><TD width=150 align=center class=other>739</TD><TD width=150 align=center class=other>0.62</TD><TD width=150 align=center class=other>-278</TD><TD width=150 align=center class=other>4</TD><TD width=150 align=center class=other>9</TD><TD width=150 align=center class=other>25</TD>
+<TD width=150 align=center class=other>-1549.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>22</TD><TD width=250 align=center  class=column1><a class=other href='player_red.html'>RED</a></TD><TD width=150 align=center class=other>18671</TD><TD width=150 align=center class=other>30394</TD><TD width=150 align=center class=other>0.61</TD><TD width=150 align=center class=other>-11723</TD><TD width=150 align=center class=other>206</TD><TD width=150 align=center class=other>11</TD><TD width=150 align=center class=other>1084</TD>
+<TD width=150 align=center class=other>-71666.50</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>23</TD><TD width=250 align=center  class=column1><a class=other href='player_little+20boy.html'>Little&#32;boy</a></TD><TD width=150 align=center class=other>4658</TD><TD width=150 align=center class=other>9579</TD><TD width=150 align=center class=other>0.48</TD><TD width=150 align=center class=other>-4921</TD><TD width=150 align=center class=other>21</TD><TD width=150 align=center class=other>9</TD><TD width=150 align=center class=other>325</TD>
+<TD width=150 align=center class=other>-26263.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>24</TD><TD width=250 align=center  class=column1><a class=other href='player_agent_7070.html'>Agent_7070</a></TD><TD width=150 align=center class=other>490</TD><TD width=150 align=center class=other>1010</TD><TD width=150 align=center class=other>0.48</TD><TD width=150 align=center class=other>-520</TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>5</TD><TD width=150 align=center class=other>41</TD>
+<TD width=150 align=center class=other>-2631.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>25</TD><TD width=250 align=center  class=column1><a class=other href='player_batman.html'>BATMAN</a></TD><TD width=150 align=center class=other>1132</TD><TD width=150 align=center class=other>2386</TD><TD width=150 align=center class=other>0.47</TD><TD width=150 align=center class=other>-1254</TD><TD width=150 align=center class=other>11</TD><TD width=150 align=center class=other>7</TD><TD width=150 align=center class=other>102</TD>
+<TD width=150 align=center class=other>-6614.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>26</TD><TD width=250 align=center  class=column1><a class=other href='player_zeus.html'>Zeus</a></TD><TD width=150 align=center class=other>174</TD><TD width=150 align=center class=other>546</TD><TD width=150 align=center class=other>0.31</TD><TD width=150 align=center class=other>-372</TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>5</TD><TD width=150 align=center class=other>24</TD>
+<TD width=150 align=center class=other>-1550.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+<tr><TD width=75 align=center class=other><b>27</TD><TD width=250 align=center  class=column1><a class=other href='player_master+20coco.html'>Master&#32;Coco</a></TD><TD width=150 align=center class=other>229</TD><TD width=150 align=center class=other>840</TD><TD width=150 align=center class=other>0.27</TD><TD width=150 align=center class=other>-611</TD><TD width=150 align=center class=other>0</TD><TD width=150 align=center class=other>4</TD><TD width=150 align=center class=other>31</TD>
+<TD width=150 align=center class=other>-2908.00</TD><TD width=150 align=center class=other>07/10/21</TD></tr>
+
+
+</table><h3><br>Stat generated by <b><i><a href="http://www.Stativore.co.uk" target="_blank">Stativore  V1.0 Build 273  Profile: ccr.ini</a> -  07/10/2021, 14:41:18<b/><i/><h3/>
+<h3><br>Version supported by Delerium, Lesbian King and Hebbian <b><i><a href="http://www.longdongs.co.uk" target=_blank>- Visit website here</a><i/><b/><h3/></body>

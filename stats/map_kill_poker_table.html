@@ -1,0 +1,60 @@
+<title>Bangladeshi Server : Call of Duty United Offensive Statistics</title><style>
+a:hover{COLOR:red}
+TD.column1 {font-family:Arial;font-size: 10px;COLOR: #000000;BACKGROUND-COLOR: #525762;FONT-WEIGHT = bold}
+TD.other {font-family:Arial;font-size: 10px;COLOR: #E0E0E0;BACKGROUND-COLOR: #5c616c}
+H1 {font-family:Arial;font-size: 16px;COLOR: #FFFFFF;FONT-WEIGHT = bold;text-decoration: underline}
+H2 {font-family:Arial;font-size: 10px;COLOR: #FF7B05;FONT-WEIGHT = bold}
+H3 {font-family:Arial;font-size: 9px;COLOR: #FF7B05}
+TH {font-family:arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951;text-decoration: underline}
+A{font-family:Arial;font-size: 10px;text-decoration: none;COLOR: #FFFFFF}
+a.head{font-family:Arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951}
+BODY {SCROLLBAR-TRACK-COLOR: #31343d; SCROLLBAR-BASE-COLOR: #3a3e41}
+</style> <body bgcolor=#525762 background='Images/Other/Back.gif'>
+<table width=100%><tr><th width=20% align=center class=other><a class='head'  href=server.html>server statistics</a></th><th width=20% align=center class=other ><a  class='head' href=stat_score.html>kill statistics</a></th><th width=20% align=center class=head ><a  class='head' href=obj_bel_alive_tick.html>objectives statistics</a></th><th width=20% align=center  class=other><a class='head'  href=award.html>award</a></th><th width=20% align=center class=other><a class='head'  href=weights.html>skill modifiers</a></th></tr></table><script><!--
+var TRIED_EVERYTHING = 998;
+var IMBROKEN = 999;
+var ImageNotFound;
+function ErrorImg(obj, folder, image, ext)
+{
+  switch(obj.NextTry)
+  {
+    case IMBROKEN:
+      break;
+    case TRIED_EVERYTHING:
+      obj.NextTry = IMBROKEN;
+      obj.src = folder + 'image_not_found.' + ext;
+      break;
+    default:
+      if (image.substr(image.length - 3,3) == '_sm')
+      {
+        obj.NextTry = IMBROKEN;
+        obj.src = folder + 'image_not_found.' + ext;
+      }
+      else
+      {
+        obj.NextTry = TRIED_EVERYTHING;
+        obj.src = folder + image + '_sm.' + ext;
+      }
+      break;
+  }
+  return(0);
+}
+// -->
+</script>
+
+<br><br><table><tr align=middle><td><h1>poker&#32;table</h1></td><td width=10%></td><td align=center><img border=0 src="Images/Maps/poker_table.jpg" onError="ErrorImg(this,'Images/Maps/','poker_table', 'jpg');"></td></tr></table><br><br>
+<table><tr><TH width=150 align=center class=other ><b>rank</TH><TH width=150 align=center class=column1><b>player</TH><TH width=150 align=center><b><a class=head href='map_kill_poker_table.html'>kill</a></TH><TH width=150 align=center><b><a class=head href='map_death_poker_table.html'>death</a></TH><TH width=150 align=center><b><a class=head href='map_ratio_poker_table.html'>ratio</a></TH><TH width=150 align=center><b><a class=head href='map_score_poker_table.html'>score</a></TH></tr>
+<tr><TD width=150 align=center class=other><b>1</TD><TD width=150 align=center  class=column1><a class=other href='player_joker.html'>Joker</a></TD><TD width=150 align=center class=other>64</TD><TD width=150 align=center class=other>47</TD><TD width=150 align=center class=other>1.36</TD><TD width=150 align=center class=other>17</TD></tr>
+<tr><TD width=150 align=center class=other><b>2</TD><TD width=150 align=center  class=column1><a class=other href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=150 align=center class=other>52</TD><TD width=150 align=center class=other>32</TD><TD width=150 align=center class=other>1.62</TD><TD width=150 align=center class=other>20</TD></tr>
+<tr><TD width=150 align=center class=other><b>3</TD><TD width=150 align=center  class=column1><a class=other href='player_maximus.html'>MAXIMUS</a></TD><TD width=150 align=center class=other>48</TD><TD width=150 align=center class=other>47</TD><TD width=150 align=center class=other>1.02</TD><TD width=150 align=center class=other>1</TD></tr>
+<tr><TD width=150 align=center class=other><b>4</TD><TD width=150 align=center  class=column1><a class=other href='player_mogambo.html'>MoGamBo</a></TD><TD width=150 align=center class=other>48</TD><TD width=150 align=center class=other>58</TD><TD width=150 align=center class=other>0.82</TD><TD width=150 align=center class=other>-10</TD></tr>
+<tr><TD width=150 align=center class=other><b>5</TD><TD width=150 align=center  class=column1><a class=other href='player_red.html'>RED</a></TD><TD width=150 align=center class=other>38</TD><TD width=150 align=center class=other>51</TD><TD width=150 align=center class=other>0.74</TD><TD width=150 align=center class=other>-13</TD></tr>
+<tr><TD width=150 align=center class=other><b>6</TD><TD width=150 align=center  class=column1><a class=other href='player_megamind.html'>Megamind</a></TD><TD width=150 align=center class=other>25</TD><TD width=150 align=center class=other>10</TD><TD width=150 align=center class=other>2.50</TD><TD width=150 align=center class=other>15</TD></tr>
+<tr><TD width=150 align=center class=other><b>7</TD><TD width=150 align=center  class=column1><a class=other href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=150 align=center class=other>18</TD><TD width=150 align=center class=other>38</TD><TD width=150 align=center class=other>0.47</TD><TD width=150 align=center class=other>-20</TD></tr>
+<tr><TD width=150 align=center class=other><b>8</TD><TD width=150 align=center  class=column1><a class=other href='player_medhabi.html'>Medhabi</a></TD><TD width=150 align=center class=other>13</TD><TD width=150 align=center class=other>15</TD><TD width=150 align=center class=other>0.86</TD><TD width=150 align=center class=other>-2</TD></tr>
+<tr><TD width=150 align=center class=other><b>9</TD><TD width=150 align=center  class=column1><a class=other href='player_gaddafi.html'>Gaddafi</a></TD><TD width=150 align=center class=other>8</TD><TD width=150 align=center class=other>16</TD><TD width=150 align=center class=other>0.50</TD><TD width=150 align=center class=other>-8</TD></tr>
+<tr><TD width=150 align=center class=other><b>10</TD><TD width=150 align=center  class=column1><a class=other href='player_homelander.html'></font><FONT color=red>HOMELANDER</a></TD><TD width=150 align=center class=other>6</TD><TD width=150 align=center class=other>6</TD><TD width=150 align=center class=other>1.00</TD><TD width=150 align=center class=other>0</TD></tr>
+
+
+</table><h3><br>Stat generated by <b><i><a href="http://www.Stativore.co.uk" target="_blank">Stativore  V1.0 Build 273  Profile: ccr.ini</a> -  07/10/2021, 14:41:21<b/><i/><h3/>
+<h3><br>Version supported by Delerium, Lesbian King and Hebbian <b><i><a href="http://www.longdongs.co.uk" target=_blank>- Visit website here</a><i/><b/><h3/></body>

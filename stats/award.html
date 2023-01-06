@@ -1,0 +1,643 @@
+<title>Bangladeshi Server : Call of Duty United Offensive Statistics</title><style>
+a:hover{COLOR:red}
+TD.column1 {font-family:Arial;font-size: 10px;COLOR: #000000;BACKGROUND-COLOR: #525762;FONT-WEIGHT = bold}
+TD.other {font-family:Arial;font-size: 10px;COLOR: #E0E0E0;BACKGROUND-COLOR: #5c616c}
+H1 {font-family:Arial;font-size: 16px;COLOR: #FFFFFF;FONT-WEIGHT = bold;text-decoration: underline}
+H2 {font-family:Arial;font-size: 10px;COLOR: #FF7B05;FONT-WEIGHT = bold}
+H3 {font-family:Arial;font-size: 9px;COLOR: #FF7B05}
+TH {font-family:arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951;text-decoration: underline}
+A{font-family:Arial;font-size: 10px;text-decoration: none;COLOR: #FFFFFF}
+a.head{font-family:Arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951}
+BODY {SCROLLBAR-TRACK-COLOR: #31343d; SCROLLBAR-BASE-COLOR: #3a3e41}
+</style> <body bgcolor=#525762 background='Images/Other/Back.gif'>
+<table width=100%><tr><th width=20% align=center class=other><a class='head'  href=server.html>server statistics</a></th><th width=20% align=center class=other ><a  class='head' href=stat_score.html>kill statistics</a></th><th width=20% align=center class=head ><a  class='head' href=obj_bel_alive_tick.html>objectives statistics</a></th><th width=20% align=center  class=other><a class='head'  href=award.html>award</a></th><th width=20% align=center class=other><a class='head'  href=weights.html>skill modifiers</a></th></tr></table><script><!--
+var TRIED_EVERYTHING = 998;
+var IMBROKEN = 999;
+var ImageNotFound;
+function ErrorImg(obj, folder, image, ext)
+{
+  switch(obj.NextTry)
+  {
+    case IMBROKEN:
+      break;
+    case TRIED_EVERYTHING:
+      obj.NextTry = IMBROKEN;
+      obj.src = folder + 'image_not_found.' + ext;
+      break;
+    default:
+      if (image.substr(image.length - 3,3) == '_sm')
+      {
+        obj.NextTry = IMBROKEN;
+        obj.src = folder + 'image_not_found.' + ext;
+      }
+      else
+      {
+        obj.NextTry = TRIED_EVERYTHING;
+        obj.src = folder + image + '_sm.' + ext;
+      }
+      break;
+  }
+  return(0);
+}
+// -->
+</script>
+
+<h1>award</h1>
+<table><tr><th width=300>award</th><th></th></tr>
+<tr><td align=center class=other><a href='#king'>King</a></td><td align=left class=other>Players with best skill per round</td></tr>
+<tr><td align=center class=other><a href='#top_player'>Top Player</a></td><td align=left class=other>Players with most skill points</td></tr>
+<tr><td align=center class=other><a href='#survivor'>Survivor</a></td><td align=left class=other>Player who kills more than dies</td></tr>
+<tr><td align=center class=other><a href='#riflemen'>Riflemen</a></td><td align=left class=other>Top player using bolt action rifles</td></tr>
+<tr><td align=center class=other><a href='#semi_auto_riflemen'>Semi auto riflemen</a></td><td align=left class=other>Top player using semi automatic rifles</td></tr>
+<tr><td align=center class=other><a href='#heavy_machine_gunner'>Heavy machine gunner</a></td><td align=left class=other>Top players using static machine guns</td></tr>
+<tr><td align=center class=other><a href='#support_machine_gunner'>Support machine gunner</a></td><td align=left class=other>Top players using support machine guns</td></tr>
+<tr><td align=center class=other><a href='#gangster'>Gangster</a></td><td align=left class=other>Top players using pistols</td></tr>
+<tr><td align=center class=other><a href='#head_shooter'>Head shooter</a></td><td align=left class=other>Top players shooting direct in the head</td></tr>
+<tr><td align=center class=other><a href='#psycho'>Psycho</a></td><td align=left class=other>Top player beating someone to death</td></tr>
+<tr><td align=center class=other><a href='#knob'>Knob</a></td><td align=left class=other>Top players killing themself</td></tr>
+<tr><td align=center class=other><a href='#camper'>Camper</a></td><td align=left class=other>Top players using sniper guns</td></tr>
+<tr><td align=center class=other><a href='#wafter'>Wafter</a></td><td align=left class=other>Top players using light machine guns</td></tr>
+<tr><td align=center class=other><a href='#elton_john'>Elton John</a></td><td align=left class=other>Top rocket man/woman</td></tr>
+<tr><td align=center class=other><a href='#driver'>Driver</a></td><td align=left class=other>Top player running someone over</td></tr>
+<tr><td align=center class=other><a href='#chef'>Chef</a></td><td align=left class=other>Top player roasting people</td></tr>
+<tr><td align=center class=other><a href='#chicken'>Chicken</a></td><td align=left class=other>Player who hides like a coward while everyone else hunts for him</td></tr>
+<tr><td align=center class=other><a href='#hq_master'>HQ Master</a></td><td align=left class=other>Real HQ Player</td></tr>
+<tr><td align=center class=other><a href='#grenade_master'>Grenade Master</a></td><td align=left class=other>Any kind of Genades or Satchel Users</td></tr>
+<tr><td align=center class=other><a href='#death_king'>Death King</a></td><td align=left class=other>Dead man tells no tell</td></tr>
+</table><br><hr>
+
+
+<a name=king><br><h2>King - Players with best skill per round</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>4.25</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>-12.10</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>-15.97</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>-17.37</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=100 align=center class=other>-21.17</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>53.13</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_gaddafi.html'>Gaddafi</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=top_player><br><h2>Top Player - Players with most skill points</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>34.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_mad_dog_mirpur.html'>MAD_DOG_MIRPUR</a></TD><TD width=100 align=center class=other>-170.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_achilis_armor.html'></font><FONT color=#00FF00>ACHILIS_</font><FONT color=blue>ARMOR</a></TD><TD width=100 align=center class=other>-293.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_zero.html'>Zero</a></TD><TD width=100 align=center class=other>-389.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_general+20gandu.html'>GENERAL&#32;GANDU</a></TD><TD width=100 align=center class=other>-422.50</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>425</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=100 align=center class=other> <0.01</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=survivor><br><h2>Survivor - Player who kills more than dies</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>3253</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>1544</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>1178</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=100 align=center class=other>756</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>12.00</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=100 align=center class=other>304</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>249</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>216</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>159</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>150</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=riflemen><br><h2>Riflemen - Top player using bolt action rifles</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=100 align=center class=other>1671</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>1534</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>1469</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>1413</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>729</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_kutus.html'>kutus</a></TD><TD width=100 align=center class=other>278</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=100 align=center class=other>193</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_batman.html'>BATMAN</a></TD><TD width=100 align=center class=other>166</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>145</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_x_b.html'>X_B</a></TD><TD width=100 align=center class=other>140</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=semi_auto_riflemen><br><h2>Semi auto riflemen - Top player using semi automatic rifles</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>468</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>103</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>59.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=100 align=center class=other>23.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>21.00</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_master+20coco.html'>Master&#32;Coco</a></TD><TD width=100 align=center class=other>48.39</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>41.94</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_darklord.html'></font><FONT color=red>DarkLord</a></TD><TD width=100 align=center class=other>27.27</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_zeus.html'>Zeus</a></TD><TD width=100 align=center class=other>16.67</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>10.59</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=heavy_machine_gunner><br><h2>Heavy machine gunner - Top players using static machine guns</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>662</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>572</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>556</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>377</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=100 align=center class=other>351</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_darklord.html'></font><FONT color=red>DarkLord</a></TD><TD width=100 align=center class=other>145</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_general+20gandu.html'>GENERAL&#32;GANDU</a></TD><TD width=100 align=center class=other>117</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>82.13</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>75.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_zero.html'>Zero</a></TD><TD width=100 align=center class=other>66.67</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=support_machine_gunner><br><h2>Support machine gunner - Top players using support machine guns</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>11254</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>4503</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>4225</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>3233</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>2633</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_raptor.html'>Raptor</a></TD><TD width=100 align=center class=other>1224</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_kutus.html'>kutus</a></TD><TD width=100 align=center class=other>750</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>747</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_mad_dog_mirpur.html'>MAD_DOG_MIRPUR</a></TD><TD width=100 align=center class=other>713</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>684</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=gangster><br><h2>Gangster - Top players using pistols</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>1010</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>775</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>502</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>457</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>202</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>104</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_achilis_armor.html'></font><FONT color=#00FF00>ACHILIS_</font><FONT color=blue>ARMOR</a></TD><TD width=100 align=center class=other>83.33</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>56.03</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>51.43</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>40.95</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=head_shooter><br><h2>Head shooter - Top players shooting direct in the head</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>7239</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>4196</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>4006</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>3758</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=100 align=center class=other>3190</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>506</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_kutus.html'>kutus</a></TD><TD width=100 align=center class=other>494</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>480</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_raptor.html'>Raptor</a></TD><TD width=100 align=center class=other>473</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>468</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=psycho><br><h2>Psycho - Top player beating someone to death</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>107</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>87.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>78.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=100 align=center class=other>38.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>33.00</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>22.62</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=100 align=center class=other>15.26</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_agent_7070.html'>Agent_7070</a></TD><TD width=100 align=center class=other>14.63</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_zeus.html'>Zeus</a></TD><TD width=100 align=center class=other>12.50</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>12.50</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=knob><br><h2>Knob - Top players killing themself</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>814</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>690</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>592</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>583</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_mogambo.html'>MoGamBo</a></TD><TD width=100 align=center class=other>483</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_zero.html'>Zero</a></TD><TD width=100 align=center class=other>111</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_x_b.html'>X_B</a></TD><TD width=100 align=center class=other>104</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_agent_7070.html'>Agent_7070</a></TD><TD width=100 align=center class=other>87.80</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_achilis_armor.html'></font><FONT color=#00FF00>ACHILIS_</font><FONT color=blue>ARMOR</a></TD><TD width=100 align=center class=other>83.33</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>75.09</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=camper><br><h2>Camper - Top players using sniper guns</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>2388</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>2244</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>751</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>631</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>304</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>250</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>245</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_zeus.html'>Zeus</a></TD><TD width=100 align=center class=other>125</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_kutus.html'>kutus</a></TD><TD width=100 align=center class=other>106</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_agent_7070.html'>Agent_7070</a></TD><TD width=100 align=center class=other>73.17</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=wafter><br><h2>Wafter - Top players using light machine guns</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>2758</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>1650</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>490</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>407</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>355</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_mad_dog_mirpur.html'>MAD_DOG_MIRPUR</a></TD><TD width=100 align=center class=other>675</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>663</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_raptor.html'>Raptor</a></TD><TD width=100 align=center class=other>305</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>247</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_batman.html'>BATMAN</a></TD><TD width=100 align=center class=other>146</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=elton_john><br><h2>Elton John - Top rocket man/woman</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>116</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>108</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>56.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>40.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>31.00</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=100 align=center class=other>12.50</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>11.84</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>11.10</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>7.70</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>3.85</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=driver><br><h2>Driver - Top player running someone over</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>9.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>7.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>6.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>5.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_gaddafi.html'>Gaddafi</a></TD><TD width=100 align=center class=other>4.00</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_batman.html'>BATMAN</a></TD><TD width=100 align=center class=other>1.96</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>1.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>0.62</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_gaddafi.html'>Gaddafi</a></TD><TD width=100 align=center class=other>0.59</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>0.46</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=chef><br><h2>Chef - Top player roasting people</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>8.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>7.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>5.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_general+20gandu.html'>GENERAL&#32;GANDU</a></TD><TD width=100 align=center class=other>4.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>2.00</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_general+20gandu.html'>GENERAL&#32;GANDU</a></TD><TD width=100 align=center class=other>33.33</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>0.99</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>0.72</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>0.46</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>0.42</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=chicken><br><h2>Chicken - Player who hides like a coward while everyone else hunts for him</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>217</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>193</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>156</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>63.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>42.00</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_general+20gandu.html'>GENERAL&#32;GANDU</a></TD><TD width=100 align=center class=other>25.00</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>19.84</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>19.44</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>19.35</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>8.88</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=hq_master><br><h2>HQ Master - Real HQ Player</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>38826</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>23823</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>21533</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>20143</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=100 align=center class=other>18081</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/6.gif" onError="ErrorImg(this,'Images/Medals/','6', 'gif');"></td><TD width=50 align=center class=other><b>6</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>17938</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/7.gif" onError="ErrorImg(this,'Images/Medals/','7', 'gif');"></td><TD width=50 align=center class=other><b>7</TD><TD width=200 align=center class=column1 ><a href='player_mogambo.html'>MoGamBo</a></TD><TD width=100 align=center class=other>16952</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/8.gif" onError="ErrorImg(this,'Images/Medals/','8', 'gif');"></td><TD width=50 align=center class=other><b>8</TD><TD width=200 align=center class=column1 ><a href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=100 align=center class=other>16524</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/9.gif" onError="ErrorImg(this,'Images/Medals/','9', 'gif');"></td><TD width=50 align=center class=other><b>9</TD><TD width=200 align=center class=column1 ><a href='player_gaddafi.html'>Gaddafi</a></TD><TD width=100 align=center class=other>14436</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/10.gif" onError="ErrorImg(this,'Images/Medals/','10', 'gif');"></td><TD width=50 align=center class=other><b>10</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>12363</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_achilis_armor.html'></font><FONT color=#00FF00>ACHILIS_</font><FONT color=blue>ARMOR</a></TD><TD width=100 align=center class=other>3225</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=100 align=center class=other>2637</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=100 align=center class=other>2614</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>2576</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>2448</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/6.gif" onError="ErrorImg(this,'Images/Medals/','6', 'gif');"></td><TD width=50 align=center class=other><b>6</TD><TD width=200 align=center class=column1 ><a href='player_salahdin.html'>SALAHDIN</a></TD><TD width=100 align=center class=other>2431</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/7.gif" onError="ErrorImg(this,'Images/Medals/','7', 'gif');"></td><TD width=50 align=center class=other><b>7</TD><TD width=200 align=center class=column1 ><a href='player_homelander.html'></font><FONT color=red>HOMELANDER</a></TD><TD width=100 align=center class=other>2291</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/8.gif" onError="ErrorImg(this,'Images/Medals/','8', 'gif');"></td><TD width=50 align=center class=other><b>8</TD><TD width=200 align=center class=column1 ><a href='player_mad_dog_mirpur.html'>MAD_DOG_MIRPUR</a></TD><TD width=100 align=center class=other>2288</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/9.gif" onError="ErrorImg(this,'Images/Medals/','9', 'gif');"></td><TD width=50 align=center class=other><b>9</TD><TD width=200 align=center class=column1 ><a href='player_joker.html'>Joker</a></TD><TD width=100 align=center class=other>2248</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/10.gif" onError="ErrorImg(this,'Images/Medals/','10', 'gif');"></td><TD width=50 align=center class=other><b>10</TD><TD width=200 align=center class=column1 ><a href='player_kutus.html'>kutus</a></TD><TD width=100 align=center class=other>2194</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=grenade_master><br><h2>Grenade Master - Any kind of Genades or Satchel Users</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>9560</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>7377</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>7012</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>5641</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=100 align=center class=other>4903</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_zero.html'>Zero</a></TD><TD width=100 align=center class=other>889</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_mad_dog_mirpur.html'>MAD_DOG_MIRPUR</a></TD><TD width=100 align=center class=other>763</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>721</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_x_b.html'>X_B</a></TD><TD width=100 align=center class=other>688</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>681</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+<a name=death_king><br><h2>Death King - Dead man tells no tell</h2>
+<table width=100%><tr width=100%>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>points</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_megamind.html'>Megamind</a></TD><TD width=100 align=center class=other>38029</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_red.html'>RED</a></TD><TD width=100 align=center class=other>30394</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_maximus.html'>MAXIMUS</a></TD><TD width=100 align=center class=other>28469</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_mogambo.html'>MoGamBo</a></TD><TD width=100 align=center class=other>24707</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_medhabi.html'>Medhabi</a></TD><TD width=100 align=center class=other>23324</TD></tr>
+</table>
+</td>
+
+<td align=center>
+<table><tr><th></th><th width=50 align=center class=other><b>rank</th><th width=200 align=center class=column1><b>player</th><th width=100 align=center class=other><b>per 100 round</th></tr>
+<tr><td align=center><img border=0 src="Images/Medals/1.gif" onError="ErrorImg(this,'Images/Medals/','1', 'gif');"></td><TD width=50 align=center class=other><b>1</TD><TD width=200 align=center class=column1 ><a href='player_achilis_armor.html'></font><FONT color=#00FF00>ACHILIS_</font><FONT color=blue>ARMOR</a></TD><TD width=100 align=center class=other>3342</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/2.gif" onError="ErrorImg(this,'Images/Medals/','2', 'gif');"></td><TD width=50 align=center class=other><b>2</TD><TD width=200 align=center class=column1 ><a href='player_kutus.html'>kutus</a></TD><TD width=100 align=center class=other>3228</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/3.gif" onError="ErrorImg(this,'Images/Medals/','3', 'gif');"></td><TD width=50 align=center class=other><b>3</TD><TD width=200 align=center class=column1 ><a href='player_raptor.html'>Raptor</a></TD><TD width=100 align=center class=other>3185</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/4.gif" onError="ErrorImg(this,'Images/Medals/','4', 'gif');"></td><TD width=50 align=center class=other><b>4</TD><TD width=200 align=center class=column1 ><a href='player_x_b.html'>X_B</a></TD><TD width=100 align=center class=other>2956</TD></tr>
+<tr><td align=center><img border=0 src="Images/Medals/5.gif" onError="ErrorImg(this,'Images/Medals/','5', 'gif');"></td><TD width=50 align=center class=other><b>5</TD><TD width=200 align=center class=column1 ><a href='player_little+20boy.html'>Little&#32;boy</a></TD><TD width=100 align=center class=other>2947</TD></tr>
+</table></td></tr>
+
+</table>
+
+
+<br><hr>
+
+
+
+
+<Table></table><h3><br>Stat generated by <b><i><a href="http://www.Stativore.co.uk" target="_blank">Stativore  V1.0 Build 273  Profile: ccr.ini</a> -  07/10/2021, 14:41:18<b/><i/><h3/>
+<h3><br>Version supported by Delerium, Lesbian King and Hebbian <b><i><a href="http://www.longdongs.co.uk" target=_blank>- Visit website here</a><i/><b/><h3/></body>

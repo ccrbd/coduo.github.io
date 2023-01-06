@@ -1,0 +1,77 @@
+<title>Bangladeshi Server : Call of Duty United Offensive Statistics</title><style>
+a:hover{COLOR:red}
+TD.column1 {font-family:Arial;font-size: 10px;COLOR: #000000;BACKGROUND-COLOR: #525762;FONT-WEIGHT = bold}
+TD.other {font-family:Arial;font-size: 10px;COLOR: #E0E0E0;BACKGROUND-COLOR: #5c616c}
+H1 {font-family:Arial;font-size: 16px;COLOR: #FFFFFF;FONT-WEIGHT = bold;text-decoration: underline}
+H2 {font-family:Arial;font-size: 10px;COLOR: #FF7B05;FONT-WEIGHT = bold}
+H3 {font-family:Arial;font-size: 9px;COLOR: #FF7B05}
+TH {font-family:arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951;text-decoration: underline}
+A{font-family:Arial;font-size: 10px;text-decoration: none;COLOR: #FFFFFF}
+a.head{font-family:Arial;font-size: 12px;COLOR: #00C000;BACKGROUND-COLOR: #454951}
+BODY {SCROLLBAR-TRACK-COLOR: #31343d; SCROLLBAR-BASE-COLOR: #3a3e41}
+</style> <body bgcolor=#525762 background='Images/Other/Back.gif'>
+<table width=100%><tr><th width=20% align=center class=other><a class='head'  href=server.html>server statistics</a></th><th width=20% align=center class=other ><a  class='head' href=stat_score.html>kill statistics</a></th><th width=20% align=center class=head ><a  class='head' href=obj_bel_alive_tick.html>objectives statistics</a></th><th width=20% align=center  class=other><a class='head'  href=award.html>award</a></th><th width=20% align=center class=other><a class='head'  href=weights.html>skill modifiers</a></th></tr></table><script><!--
+var TRIED_EVERYTHING = 998;
+var IMBROKEN = 999;
+var ImageNotFound;
+function ErrorImg(obj, folder, image, ext)
+{
+  switch(obj.NextTry)
+  {
+    case IMBROKEN:
+      break;
+    case TRIED_EVERYTHING:
+      obj.NextTry = IMBROKEN;
+      obj.src = folder + 'image_not_found.' + ext;
+      break;
+    default:
+      if (image.substr(image.length - 3,3) == '_sm')
+      {
+        obj.NextTry = IMBROKEN;
+        obj.src = folder + 'image_not_found.' + ext;
+      }
+      else
+      {
+        obj.NextTry = TRIED_EVERYTHING;
+        obj.src = folder + image + '_sm.' + ext;
+      }
+      break;
+  }
+  return(0);
+}
+// -->
+</script>
+
+<br><br><table><tr align=middle><td><h1>luger</h1></td><td width=10%></td><td align=center><img border=0 src="Images/Weapons/luger_mp.gif" onError="ErrorImg(this,'Images/Weapons/','luger_mp', 'gif');"></td></tr></table><br><br>
+<table><tr><TH width=150 align=center class=other ><b>rank</TH><TH width=150 align=center class=column1><b>player</TH><TH width=150 align=center><b><a class=head href='wp_kill_luger_mp.html'>kill</a></TH><TH width=150 align=center><b><a class=head href='wp_death_luger_mp.html'>death</a></TH></tr>
+<tr><TD width=150 align=center class=other><b>1</TD><TD width=150 align=center  class=column1><a class=other href='player_megamind.html'>Megamind</a></TD><TD width=150 align=center class=other>557</TD><TD width=150 align=center class=other>469</TD></tr>
+<tr><TD width=150 align=center class=other><b>2</TD><TD width=150 align=center  class=column1><a class=other href='player_medhabi.html'>Medhabi</a></TD><TD width=150 align=center class=other>472</TD><TD width=150 align=center class=other>303</TD></tr>
+<tr><TD width=150 align=center class=other><b>3</TD><TD width=150 align=center  class=column1><a class=other href='player_maximus.html'>MAXIMUS</a></TD><TD width=150 align=center class=other>283</TD><TD width=150 align=center class=other>304</TD></tr>
+<tr><TD width=150 align=center class=other><b>4</TD><TD width=150 align=center  class=column1><a class=other href='player_joker.html'>Joker</a></TD><TD width=150 align=center class=other>191</TD><TD width=150 align=center class=other>198</TD></tr>
+<tr><TD width=150 align=center class=other><b>5</TD><TD width=150 align=center  class=column1><a class=other href='player_gaddafi.html'>Gaddafi</a></TD><TD width=150 align=center class=other>151</TD><TD width=150 align=center class=other>124</TD></tr>
+<tr><TD width=150 align=center class=other><b>6</TD><TD width=150 align=center  class=column1><a class=other href='player_gabbar+20sing.html'>GABBAR&#32;SING</a></TD><TD width=150 align=center class=other>125</TD><TD width=150 align=center class=other>122</TD></tr>
+<tr><TD width=150 align=center class=other><b>7</TD><TD width=150 align=center  class=column1><a class=other href='player_ccr.html'></font><FONT color=#00FF00>CCR</a></TD><TD width=150 align=center class=other>105</TD><TD width=150 align=center class=other>148</TD></tr>
+<tr><TD width=150 align=center class=other><b>8</TD><TD width=150 align=center  class=column1><a class=other href='player_red.html'>RED</a></TD><TD width=150 align=center class=other>80</TD><TD width=150 align=center class=other>213</TD></tr>
+<tr><TD width=150 align=center class=other><b>9</TD><TD width=150 align=center  class=column1><a class=other href='player_homelander.html'></font><FONT color=red>HOMELANDER</a></TD><TD width=150 align=center class=other>58</TD><TD width=150 align=center class=other>55</TD></tr>
+<tr><TD width=150 align=center class=other><b>10</TD><TD width=150 align=center  class=column1><a class=other href='player_viper.html'></font><FONT color=red>V</font><FONT color=#00FF00>i</font><FONT color=#FFFF00>p</font><FONT color=#FFFF00>e</font><FONT color=#00FFFF>R</a></TD><TD width=150 align=center class=other>44</TD><TD width=150 align=center class=other>68</TD></tr>
+<tr><TD width=150 align=center class=other><b>11</TD><TD width=150 align=center  class=column1><a class=other href='player_mogambo.html'>MoGamBo</a></TD><TD width=150 align=center class=other>38</TD><TD width=150 align=center class=other>162</TD></tr>
+<tr><TD width=150 align=center class=other><b>12</TD><TD width=150 align=center  class=column1><a class=other href='player_general+20fatman.html'>GENERAL&#32;FATMAN</a></TD><TD width=150 align=center class=other>18</TD><TD width=150 align=center class=other>15</TD></tr>
+<tr><TD width=150 align=center class=other><b>13</TD><TD width=150 align=center  class=column1><a class=other href='player_achilis_armor.html'></font><FONT color=#00FF00>ACHILIS_</font><FONT color=blue>ARMOR</a></TD><TD width=150 align=center class=other>5</TD><TD width=150 align=center class=other>3</TD></tr>
+<tr><TD width=150 align=center class=other><b>14</TD><TD width=150 align=center  class=column1><a class=other href='player_master+20coco.html'>Master&#32;Coco</a></TD><TD width=150 align=center class=other>5</TD><TD width=150 align=center class=other>12</TD></tr>
+<tr><TD width=150 align=center class=other><b>15</TD><TD width=150 align=center  class=column1><a class=other href='player_salahdin.html'>SALAHDIN</a></TD><TD width=150 align=center class=other>4</TD><TD width=150 align=center class=other>7</TD></tr>
+<tr><TD width=150 align=center class=other><b>16</TD><TD width=150 align=center  class=column1><a class=other href='player_x_b.html'>X_B</a></TD><TD width=150 align=center class=other>4</TD><TD width=150 align=center class=other>10</TD></tr>
+<tr><TD width=150 align=center class=other><b>17</TD><TD width=150 align=center  class=column1><a class=other href='player_zero.html'>Zero</a></TD><TD width=150 align=center class=other>3</TD><TD width=150 align=center class=other>2</TD></tr>
+<tr><TD width=150 align=center class=other><b>18</TD><TD width=150 align=center  class=column1><a class=other href='player_little+20boy.html'>Little&#32;boy</a></TD><TD width=150 align=center class=other>3</TD><TD width=150 align=center class=other>67</TD></tr>
+<tr><TD width=150 align=center class=other><b>19</TD><TD width=150 align=center  class=column1><a class=other href='player_agent_7070.html'>Agent_7070</a></TD><TD width=150 align=center class=other>2</TD><TD width=150 align=center class=other>5</TD></tr>
+<tr><TD width=150 align=center class=other><b>20</TD><TD width=150 align=center  class=column1><a class=other href='player_raptor.html'>Raptor</a></TD><TD width=150 align=center class=other>2</TD><TD width=150 align=center class=other>9</TD></tr>
+<tr><TD width=150 align=center class=other><b>21</TD><TD width=150 align=center  class=column1><a class=other href='player_general+20gandu.html'>GENERAL&#32;GANDU</a></TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>0</TD></tr>
+<tr><TD width=150 align=center class=other><b>22</TD><TD width=150 align=center  class=column1><a class=other href='player_darklord.html'></font><FONT color=red>DarkLord</a></TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>1</TD></tr>
+<tr><TD width=150 align=center class=other><b>23</TD><TD width=150 align=center  class=column1><a class=other href='player_kutus.html'>kutus</a></TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>2</TD></tr>
+<tr><TD width=150 align=center class=other><b>24</TD><TD width=150 align=center  class=column1><a class=other href='player_rango.html'></font><FONT color=red>Rango</a></TD><TD width=150 align=center class=other>1</TD><TD width=150 align=center class=other>3</TD></tr>
+<tr><TD width=150 align=center class=other><b>25</TD><TD width=150 align=center  class=column1><a class=other href='player_mad_dog_mirpur.html'>MAD_DOG_MIRPUR</a></TD><TD width=150 align=center class=other>0</TD><TD width=150 align=center class=other>2</TD></tr>
+<tr><TD width=150 align=center class=other><b>26</TD><TD width=150 align=center  class=column1><a class=other href='player_zeus.html'>Zeus</a></TD><TD width=150 align=center class=other>0</TD><TD width=150 align=center class=other>3</TD></tr>
+<tr><TD width=150 align=center class=other><b>27</TD><TD width=150 align=center  class=column1><a class=other href='player_batman.html'>BATMAN</a></TD><TD width=150 align=center class=other>0</TD><TD width=150 align=center class=other>14</TD></tr>
+
+
+</table><h3><br>Stat generated by <b><i><a href="http://www.Stativore.co.uk" target="_blank">Stativore  V1.0 Build 273  Profile: ccr.ini</a> -  07/10/2021, 14:41:20<b/><i/><h3/>
+<h3><br>Version supported by Delerium, Lesbian King and Hebbian <b><i><a href="http://www.longdongs.co.uk" target=_blank>- Visit website here</a><i/><b/><h3/></body>
